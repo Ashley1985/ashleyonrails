@@ -1,6 +1,7 @@
 <div class="panel panel-default">
  <div class="panel-heading">
  <p id="notice"><%= notice %></p>
+ <%= image_tag @pin.image.url (:medium) %> <br>
  <h2>Description:</h2>
  </div>
   <div class="panel-body">
@@ -10,4 +11,5 @@
 <% if @pin.user == current_user %>
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
 <%= link_to 'Back', pins_path %></div>
+<% end %>
 </div>
